@@ -1,0 +1,22 @@
+---
+title: "shT_1"
+author: "Olena Yavorska"
+date: "October 13, 2015"
+output: html_document
+---
+
+We would like to see how hairpins targeting the same gene affect individual cell lines when compared to the other hairpins in the dataset:
+
+1. Take one cell line at a time and rank all the hairpins by log FC from most negative (toxic) to most positive (enrichment promoting). 
+2. Highlight the position of the hairpins corresponding to a chosen gene. 
+3. Calculate a score for the gene by using the median of its hairpins.
+
+Here we can visually see if particular cell lines are more susceptible to targeted gene knockdown by seeing how similar the rankings are for each of the shRNAs. Taking a random cell line, in this case X22RV1 (a prostate cancer), we sort the LFC scores over all hairpins and higlight those that target MDM4.
+
+From the default plot, we see that the four MDM4 hairpins target the prostate cancer cell line very differently. Where two hairpins would be considered toxic, the other two cluster above zero, hence their abundance increases in the cancer suggesting enrichment. The median is used as a way to see how the gene affects the cell line, how much of a role it plays in the cancer. Unfortunately we can see that simply finding a median of the relevant hairpin expressions is not a good way to quantify the importance of this gene (in fact most genes). In the above case this would be equivalent to saying that because two hairpins are toxic and two cause enrichment, MDM4 must not have a very strong role to play in this particular cell line. *One must be vary of using these types of summary measures.*
+
+Below, one can produce this plot for every cell line and gene in the Achilles data set. 
+Simply type in a gene HGNC name and click on a cell line from the list.
+
+*Something to keep in mind:*
+*Knocking down genes that are mutants in cell lines will have differing effects due to the sequence difference caused by the mutation : if the mutation occurs at the target site of the hairpin, then the expected knockdown of this gene using this hairpin is unlikely. Hairpins that target unmutated sites are therefore much better at knocking down the gene, showing differential expression between the wt and mut cell lines for the given gene. For this reason, it makes sense to knock down genes that aren't mutated in any of the cell lines to see just how targeted the method is, i.e. how consistently the hairpins behave. In this analysis we look closely at MDM4, a gene that is mutated in only 3 of the 216 cell lines, hence this phenomenon should not affect our results but is something to be vary of.*

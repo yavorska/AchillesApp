@@ -1,0 +1,17 @@
+---
+title: "shT_2a"
+author: "Olena Yavorska"
+date: "October 13, 2015"
+output: html_document
+---
+
+**Option 1**
+
+Here we generalise more. Rather than viewing one cell line at a time, we look at all the cell lines for one entity and how the hairpin effects are distributed within cell lines belonging to that entity.
+
+Maybe *gene X* has little role to play in lung cancers and the hairpins seem to be distributed very randomly along the ranked scores for the lung cell lines but is an essential gene in breast cancers and its knockout reflects this. To visualise the effect of out chosen gene on each entity individually, we plot each hairpin LFC score for each cell line in the chosen entity. 
+
+The heights of the boxplots give a rough idea of how 'targeted' the hairpins are as a whole on that particular cell line. The taller they are, the more scattered and hence the less targeted the effect. A good example of a cell line that MDM4 seems to have a targeted effect on above is EWS502, however this isn't very interesting because the effect it does have is close to zero and hence not significant.
+
+  
+

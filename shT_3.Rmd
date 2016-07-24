@@ -1,0 +1,16 @@
+---
+title: "shT_3"
+author: "Olena Yavorska"
+date: "October 13, 2015"
+output: html_document
+---
+
+> Q : If the relevant hairpins only targeted one gene and did this equally well, what would we expect?
+
+> A : We would see almost identical expression values for each hairpin over all cell lines, i.e. although cell lines A and B may have little in common, there should be little variation between A1, A2 and A3.
+
+Here we can see a plot that looks at this particular idea in Achilles, each coloured line represents a cell line where the peaks are the LFC scores for the relevant hairpin (given on the X axis). 
+
+If each hairpin only targeted one gene as previously mentioned, we would expect to have many (almost) parallel lines since any large slopes indicate a stark difference between effects of hairpins for the same cell line. However, for MDM4 at least, we see other patterns. For example, the expression values of X28163 tend to be significantly lower than those of X28164 for almost all the cell lines. In fact, when comparing the boxplots of these two hairpins, it is clear that there is relatively little variation in the effect of X28164 on the different cell lines which could indicate that this hairpin is also targeting something else.
+
+One can view each gene in Achilles this way and can do so by plotting over all cell lines or those of a chosen entity. The sequences of the gene hairpins are also given.

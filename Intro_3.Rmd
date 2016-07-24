@@ -1,0 +1,36 @@
+---
+title: "Intro_3"
+author: "Olena Yavorska"
+date: "October 14, 2015"
+output:
+  html_document:
+    fig_caption: true
+---
+
+**Types of Screens**
+
+There are two types of shRNA screens that are currently performed :
+
+<img src=http://www.nature.com/article-assets/npg/sdata/2014/sdata201435/images_hires/w926/sdata201435-f1.jpg
+title="Pooled screen schematic used in Project Achilles v2.4.3. Image retrieved from: http://www.nature.com/article-assets/npg/sdata/2014/sdata201435/images_hires/w926/sdata201435-f1.jpg" 
+style="display: block; margin: auto; height:700px; float: right;"
+/>
+
+1. **Array** screens involve systematic one hairpin per well knockdown.
+2. **Pooled** screens involve amalgamation of up to the entire library of hairpins (Project Achilles used over 54k shRNAs in their library) targeting thousands of genes collectively. There are usually enough cells to facilitate one shRNA per cell but there is a possibility of having more than one shRNA targeting one cell since the cells are exposed to all the shRNAs at the same time.
+
+In pooled screens, we compare the relative number of hairpins before and after propagation to see which hairpins are more abundant (enriched) or less abundant (depleted). This is done by microarray hybridization.
+
+Given these relative numbers of shRNAs targeting the same gene, we can interpret different things about the cell: 
+
+* If gene is not important to the disease, the number of hairpins won't change when this gene is knocked out.
+* If gene is essential to the cell's survival, its loss is toxic to the cell. Then the number of shRNAs targeting that gene will be depleted.
+* If gene is a cancer suppressor, its knockdown will increase cell proliferation and this hairpin will be enriched.
+
+*Note : Pooled screens are considered less reliable due to the possibility of transinfection by more than one shRNA. See "Systematic analysis of RNAi reports identifies dismal commonality at gene-level & reveals an unprecedented enrichment in pooled shRNA screens",* http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3885821/
+
+**Limitations**
+
+Apart from the limitations of the screens (as described in the paper above), there are also limitations to using shRNAs. The shape and length of the hairpin has an effect on how targeted it is (see *"Minimal-length short hairpin RNAs: The relationship of structure and RNAi activity"*, http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2802021/).
+
+The assumption that the guide strand will fully bind to the mRNA (without any mismatches within or at either end of the sequence) is naiive. In fact, it often happens that shRNAs targeting the same gene behave very differently due to off target effects (partial sequence matches to other genes result in cleavage of the wrong mRNA). This hinders the suitability of using short hairpin RNA for therapeutic aims.

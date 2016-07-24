@@ -1,0 +1,10 @@
+---
+title: "p53_1"
+author: "Olena Yavorska"
+date: "October 13, 2015"
+output: html_document
+---
+
+To have a rough idea of whether p53 wt and mut cell behave differently when subjected to MDM4 knockout, one can simply plot the LFC scores as before in the *Consistency* plot but colour code the cell lines according to p53 status.
+
+In the default, we see the effect of MDM4 shRNAs on the seven skin cancers in the data. Based on the boxplots, there does seem to be a difference in how the different p53 classes are affected. *Note: Because there are so few cell lines, one cannot draw any robust conclusions here but visualising the effects based on class is still very useful.*

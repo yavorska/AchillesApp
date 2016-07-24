@@ -1,0 +1,37 @@
+---
+title: "Intro_2"
+author: "Olena Yavorska"
+date: "October 14, 2015"
+output:
+  html_document:
+    fig_caption: true
+---
+
+<img src=https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/ShRNA_Lentivirus.svg/2000px-ShRNA_Lentivirus.svg.png
+title="Image retrieved from: https://en.wikipedia.org/wiki/RNA_interference#/media/File:ShRNA_Lentivirus.svg" 
+style="display: block; margin: auto; height:700px; float:right;"
+/>
+
+RNAi requires double stranded RNA (dsRNA). This is basically long single stranded RNA (ssRNA) that folds back on itself due to high base complementarity (bases always want to be paired up because of the formation of hydrogen bonds). The three types of dsRNA are :
+
+* micro RNA (miRNA)
+* short hairpin RNA (shRNA)
+* small interfering RNA (siRNA)
+
+We will focus on shRNA, although the mechanism is very similar for the other types of dsRNA molecules. shRNAs are usually 20-25 nucleotides long (the length of the stem of the hairpin), in Project Achilles each hairpin was 21 basepairs long.
+
+**RNAi mechanism using shRNA**
+
+1. shRNA is present in the nucleus. This can happen in the following ways: 
+  + The dsRNA forms natuarally due to base complementarity of a long ssRNA.
+  + A viral vector is injected into the cell by a physician.
+2. The dsRNA is targeted by DROSHA, which cuts the dsRNA producting Pre-shRNA with a two nucleotide overhang.
+3. The Pre-shRNA is transported from the nucleus to the cytoplasm by Exportin 5.
+4. In the cytoplasm, the Pre-shRNA molecule is targeted by DICER. *DICER is an RNAse III (and endonuclease) which means it breaks down RNA from the endonucleus (middle).* It breaks both strands of the Pre-shRNA molecule, cutting off the hairpin, forming siRNA with di-nucleotide overhangs at the 3' ends. This is often called a **duplex**.
+5. The siRNA is then targetted by RISC. *RISC (RNAi silencing complex) is an RNAse H, it cleaves only one strand of the complex leaving the other intact.* The sense (passenger) strand is broken down, leaving the anti-sense (guide) strand in the RISC complex.
+6. The RISC complex, armed with the guide strand, finds mRNA that has a sequence complementary to this guide stand.
+7. It binds with this target mRNA in the cytoplasm and cleaves it (but keeps the guide as is).
+8. The cleaved mRNA is either :
+  + degraded in the cytoplasm
+  + adheres with another RNA strand producing another dsRNA (starting the process back at Step 5).
+  In any case, it is not used to create the protein it was designed to create.

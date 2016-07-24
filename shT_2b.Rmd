@@ -1,0 +1,20 @@
+---
+title: "shT_2b"
+author: "Olena Yavorska"
+date: "October 13, 2015"
+output: html_document
+---
+
+**Option 2**
+
+Because we are interested in knowing how particular shRNAs perform in comparisson to others, we used the LF change scores to to group cell lines together into one representative value for each entity. This was done using two simple approaches : mean and median. 
+
+The default shows MDM4, how were the points calculated? Say we are interested in hairpin **X** and bone cancer.
+
+1. Find all bone cancer cell lines.
+2. Find the LFCS of hairpin **X** on each bone cell line (one per cell line).
+3. Find mean and median of these scores.
+4. Repeat (1-3) for other entities (ovary, lung, prostate, etc.).
+5. Repeat (1-4) for other hairpins targeting the same gene in order to facilitate comparisson.
+
+The main objective of these plots is to visually see what type of summary is best when grouping the instances of the genes together. The thin lines represent the true ranks of the various shRNAs whereas the thick lines represent different ways one can combine them into one representative value.   

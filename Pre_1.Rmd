@@ -1,0 +1,18 @@
+---
+title: "Pre_1"
+author: "Olena Yavorska"
+date: "October 14, 2015"
+output: 
+  html_document:
+    fig_caption: true
+---
+
+![](https://www.broadinstitute.org/software/cprg/sites/default/files/resource_icons/achilles_new_0.png)
+
+> Project Achilles is a systematic effort aimed at identifying and cataloging genetic vulnerabilities across hundreds of genomically characterized cancer cell lines. The project uses genome-wide genetic perturbation reagents (shRNAs or Cas9/sgRNAs) to silence or knock-out individual genes and identify those genes that affect cell survival. Large-scale functional screening of cancer cell lines provides a complementary approach to those studies that aim to characterize the molecular alterations (e.g. mutations, copy number alterations) of primary tumors, such as The Cancer Genome Atlas (TCGA). The overall goal of the project is to identify cancer genetic dependencies and link them to molecular characteristics in order to prioritize targets for therapeutic development and identify the patient population that might benefit from such targets.
+
+http://www.broadinstitute.org/achilles
+
+The Project Achilles v2.4.3 data set provides the log fold change scores for roughly 54,000 shRNAs targeting 11,000 genes (on average, there are 5 shRNAs targetting the same gene) over 216 different cancer cell lines (previously, in Achilles v2.0m only 102 cell lines were included). These scores were found by performing a massively parallel pooled shRNA screen on cell lines belonging to different entities using a lentivirally delivered library. *"The proliferation effect of each shRNA in each cell line was assessed by transducing a population of 11M cells with one shRNA-virus per cell and determining the relative enrichment or depletion of each of the 54,000 shRNAs after 16 population doublings using Next Generation Sequencing."(Cowley et al.)*
+
+See http://www.nature.com/articles/sdata201435 for further information on how data was collected and processed.

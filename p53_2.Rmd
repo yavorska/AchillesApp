@@ -1,0 +1,32 @@
+---
+title: "p53_2"
+author: "Olena Yavorska"
+date: "October 13, 2015"
+output: html_document
+---
+First, **pick a gene**.
+
+As in the Cheung et al. paper, I used GENE-E to collapse the shRNA scores into gene rankings. Here I only ranked the genes based on a KS statistic (alternatives included using highest shRNA depletion score and p value rank of the second best ranked shRNA).
+
+The basic steps were :
+
+1. Generate a subset Achilles file only containing those cell lines that you know the p53 status of. Save as .gct. (In this case 163 of the 216 could be classed into mutant and wt).
+2. Create a .cls file of the p53 status of the cell lines in the file above.
+3. Import the data into GENE-E and annotate the columns using the annotation file.
+4. Run RIGER on the data using KS statistic.
+
+**All**
+
+Here, RIGER was run on all cell lines whose p53 mutation status was known (in Achilles v2.4.3 this was 163 of 216 cell lines). By default we look at the KS rank of MDM4.
+
+**Entity**
+
+RIGER was run on subsets of the data by entity (all Ovarian, Lung, Prostate, etc. cell lines were grouped together and the KS statistic was calculated). Some entities were excluded because they had too few cell lines to have a meaningful comparisson and some entities had only wt (or only mut) p53 cell lines. 
+
+From the default, we see that MDM4 may be important in breast, large intestine, lymphoid tissue, ovarian, and skin cancers. 
+
+**Achilles v2.0 vs Achilles v2.4.3**
+
+RIGER was run on the Achilles v2.0 dataset using the same options (KS, negative to positive, etc.) for the purpose of comparison. For each gene, we plot the KS rank given by running RIGER on Achilles v2.0 against the rank given by running RIGER on Achilles v2.4.3. 
+
+We highlight the top 100 toxic genes in both datasets in red, and the top enriching genes in green (genes that overlap in the top 100 in both are coloured darker). The gene we chose is circled in blue and view it with respect to the others to see whether it is ranked substantially differently by the two datasets. We note that both datasets rank MDM4 very highly which is promising. Although these are many genes that are ranked toxic by one dataset but enriching in the other.

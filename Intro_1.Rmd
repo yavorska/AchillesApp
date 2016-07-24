@@ -1,0 +1,34 @@
+---
+title: "Intro_1"
+author: "Olena Yavorska"
+date: "October 14, 2015"
+output: 
+  html_document:
+    fig_caption: true
+
+---
+
+**What is RNAi?**
+
+*RNA interference (RNAi) is a biological process in which RNA molecules inhibit gene expression, typically by causing the destruction of specific mRNA molecules.* 
+https://en.wikipedia.org/wiki/RNA_interference
+
+We know that DNA is used for protein synthesis : it is transcribed, transported and then translated to form amino acids that then fold to become proteins. RNAi is a process that cuts in at the transportations step. It targets specific mRNA and cleaves it so that there is no protein formed. As a result, the DNA itself is not altered and the target protein isn't synthesised. 
+
+<img src=http://i3dlearning.pbworks.com/f/1260569975/diagram_protein_synthesis.jpg 
+title="Image retrieved from: http://www.proteinsynthesis.org/what-is-protein-synthesis/" 
+style="display: block; margin: auto; width:400px;" 
+/>
+
+This mechanism works by subjecting the cell to double stranded RNA (dsRNA) and exploiting the cell's natural response to these types of molecules (see mechanism).
+
+
+**Why is it useful?**
+
+Given a specific deadly or disease causing protein we can : 
+
+* Find the mRNA responsible for creating that protein and cleave it using RNAi so that it is no longer produced
+* Do this continuously (by injecting the patient with the dsRNA as you would with a drug) or by using a lentiviral vector that will keep producing this type of dsRNA continuously.
+
+We can use this knockdown property to study gene dependencies of certain diseases in order to find new potentially useful gene targets. This is the main reason why the Achilles datasets were created. 
+
