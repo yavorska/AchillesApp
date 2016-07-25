@@ -120,17 +120,17 @@ shinyServer(function(input, output) {
   output$riger.gene.comparison.datasets.all.plot <- renderPlot({
     geneName <- input$geneName_GENEE
 
-    riger.gene.comparison.datasets(Achilles2.0, Achilles2.4, "Achilles v2.0", "Achilles v 2.4", geneName, "all", 1, "Comparing RIGER results for all cell lines")
+    riger.gene.comparison.datasets(Achilles2.0, Achilles2.4, "Achilles v2.0", "Achilles v 2.4", geneName, "all", 1, "Comparing RIGER results for all cell lines")[[3]]
 
   })
 
   output$riger.gene.comparison.datasets.entities.plot <- renderPlot({
     geneName <- input$geneName_GENEE
 
-    multiplot(riger.gene.comparison.datasets(Achilles2.0, Achilles2.4, "Achilles v2.0", "Achilles v 2.4", geneName, "colon", 1, "Comparing RIGER results for colon cell lines"),
-              riger.gene.comparison.datasets(Achilles2.0, Achilles2.4, "Achilles v2.0", "Achilles v 2.4", geneName, "lung", 1, "Comparing RIGER results for lung cell lines"),
-              riger.gene.comparison.datasets(Achilles2.0, Achilles2.4, "Achilles v2.0", "Achilles v 2.4", geneName, "ovary", 1, "Comparing RIGER results for ovary cell lines"),
-              riger.gene.comparison.datasets(Achilles2.0, Achilles2.4, "Achilles v2.0", "Achilles v 2.4", geneName, "pancreas", 1, "Comparing RIGER results for pancreas cell lines"),
+    multiplot(riger.gene.comparison.datasets(Achilles2.0, Achilles2.4, "Achilles v2.0", "Achilles v 2.4", geneName, "colon", 1, "Comparing RIGER results for colon cell lines")[[3]],
+              riger.gene.comparison.datasets(Achilles2.0, Achilles2.4, "Achilles v2.0", "Achilles v 2.4", geneName, "lung", 1, "Comparing RIGER results for lung cell lines")[[3]],
+              riger.gene.comparison.datasets(Achilles2.0, Achilles2.4, "Achilles v2.0", "Achilles v 2.4", geneName, "ovary", 1, "Comparing RIGER results for ovary cell lines")[[3]],
+              riger.gene.comparison.datasets(Achilles2.0, Achilles2.4, "Achilles v2.0", "Achilles v 2.4", geneName, "pancreas", 1, "Comparing RIGER results for pancreas cell lines")[[3]],
               cols = 2)
   })
 
