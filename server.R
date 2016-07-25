@@ -53,8 +53,10 @@ shinyServer(function(input, output) {
   output$consistency.of.phenotypes.all.plot <- renderPlot({
     geneName <- input$geneName_consistency.of.phenotypes
     entityName <- "all"
-    box <- consistency.of.phenotypes(RNAiObject, entityName = entityName, geneName = geneName, type = "box") + theme(legend.position = "none")
-    line <- consistency.of.phenotypes(RNAiObject, entityName = entityName, geneName = geneName, type = "line") + theme(legend.position = "none")
+    box <- consistency.of.phenotypes(RNAiObject, entityName = entityName, geneName = geneName, type = "box")[[2]] + 
+            theme(legend.position = "none")
+    line <- consistency.of.phenotypes(RNAiObject, entityName = entityName, geneName = geneName, type = "line")[[2]] + 
+            theme(legend.position = "none")
     multiplot(box, line, cols = 1)
   })
 
@@ -73,7 +75,8 @@ shinyServer(function(input, output) {
     entityName <- "all"
     status <- input$status_p53.dependency.by.entity
 
-    line <- p53.dependency.by.entity(RNAiObject, entityName = entityName, geneName = geneName, p53 = status, type = "line") + theme(legend.position = "none")
+    line <- p53.dependency.by.entity(RNAiObject, entityName = entityName, geneName = geneName, p53 = status, type = "line") + 
+              theme(legend.position = "none")
     box <- p53.dependency.by.entity(RNAiObject, entityName = entityName, geneName = geneName, p53 = status, type = "box")
     multiplot(line, box, cols = 1)
   })
