@@ -34,19 +34,19 @@ shinyServer(function(input, output) {
   output$variation.within.entity.plot <- renderPlot({
     geneName <- input$geneName_variation.within.entity
     entityName <- input$entityName_variation.within.entity
-    variation.within.entity(RNAiObject, entityName = entityName, geneName = geneName)
+    variation.within.entity(RNAiObject, entityName = entityName, geneName = geneName)[[2]]
   })
 
   output$variation.within.entities.plot <- renderPlot({
     geneName <- input$geneName_variation.within.entity
-    variation.within.entities(RNAiObject, geneName, type = "value", statistic = "median")
+    variation.within.entities(RNAiObject, geneName, type = "value", statistic = "median")[[2]]
   })
 
   output$consistency.of.phenotypes.plot <- renderPlot({
     geneName <- input$geneName_consistency.of.phenotypes
     entityName <- input$entityName_consistency.of.phenotypes
-    box <- consistency.of.phenotypes(RNAiObject, entityName = entityName, geneName = geneName, type = "box")
-    line <- consistency.of.phenotypes(RNAiObject, entityName = entityName, geneName = geneName, type = "line")
+    box <- consistency.of.phenotypes(RNAiObject, entityName = entityName, geneName = geneName, type = "box")[[2]]
+    line <- consistency.of.phenotypes(RNAiObject, entityName = entityName, geneName = geneName, type = "line")[[2]]
     multiplot(box, line, cols = 1)
   })
 
@@ -65,8 +65,8 @@ shinyServer(function(input, output) {
     entityName <- input$entityName_p53.dependency.by.entity
     status <- input$status_p53.dependency.by.entity
 
-    line <- p53.dependency.by.entity(RNAiObject, entityName = entityName, geneName = geneName, p53 = status, type = "line")
-    box <- p53.dependency.by.entity(RNAiObject, entityName = entityName, geneName = geneName, p53 = status, type = "box")
+    line <- p53.dependency.by.entity(RNAiObject, entityName = entityName, geneName = geneName, p53 = status, type = "line")[[2]]
+    box <- p53.dependency.by.entity(RNAiObject, entityName = entityName, geneName = geneName, p53 = status, type = "box")[[2]]
     multiplot(line, box, cols = 1)
   })
 
@@ -75,9 +75,9 @@ shinyServer(function(input, output) {
     entityName <- "all"
     status <- input$status_p53.dependency.by.entity
 
-    line <- p53.dependency.by.entity(RNAiObject, entityName = entityName, geneName = geneName, p53 = status, type = "line") + 
+    line <- p53.dependency.by.entity(RNAiObject, entityName = entityName, geneName = geneName, p53 = status, type = "line")[[2]] + 
               theme(legend.position = "none")
-    box <- p53.dependency.by.entity(RNAiObject, entityName = entityName, geneName = geneName, p53 = status, type = "box")
+    box <- p53.dependency.by.entity(RNAiObject, entityName = entityName, geneName = geneName, p53 = status, type = "box")[[2]]
     multiplot(line, box, cols = 1)
   })
 
